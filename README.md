@@ -1,7 +1,7 @@
 # Algorithms and data structures 🎓
 ## I - Basic Algorithms
 - [x] Find max
-- [ ] Reverse Polish Notation (RPN)
+- [x] Reverse Polish Notation (RPN)
 ## II - Data Structures
 - [x] Queue
 - [ ] Priority Queue
