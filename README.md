@@ -1,31 +1,13 @@
-# Algorithms and data structures 🎓
-## I - Basic Algorithms
-- [x] Find max
-- [x] Reverse Polish Notation (RPN)
-## II - Data Structures
-- [x] Queue
-- [ ] Priority Queue
-- [ ] Stack
-- [ ] Linked List
-- [ ] Doubly Linked List
-- [ ] Circular Linked List
-- [ ] Sentinel Linked List
-## III - Graph Algorithms
-- [ ] Prim's 
-- [ ] Dijkstra's 
-- [ ] A* 
-- [ ] Floyd-Warshall
-## IV - Pattern Searching Algorithms
-- [ ] Naive
-- [ ] Boyer-Moore
-- [ ] Karp-Rabin's
-## V - Enoding Algorithms
-- [ ] Ceasar Cipher
-- [ ] Huffman 
-- [ ] Shannon-Fano
-## VI - Sorting Algorithms
-- [ ] Insertsort
-- [ ] Bubblesort
-- [ ] Quicksort
-- [ ] Heapsort
-- [ ] Mergesort
+# Algorithms and Data Structures
+## WORK IN PROGRESS!
+## Description placeholder
+## Data Structures: 
+- Queue 
+- Priority Queue
+- Stack
+- Singly Linked List
+- Doubly Linked List
+- Circular Linked List
+
+## Algorithms:
+- Reverse Polish Notation
