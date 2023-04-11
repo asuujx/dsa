@@ -3,7 +3,7 @@
 - [x] Find max
 - [ ] Reverse Polish Notation (RPN)
 ## II - Data Structures
-- [ ] Queue
+- [x] Queue
 - [ ] Priority Queue
 - [ ] Stack
 - [ ] Linked List
