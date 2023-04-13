@@ -6,8 +6,6 @@
 - Priority Queue
 - Stack
 - Singly Linked List
-- Doubly Linked List
-- Circular Linked List
 
 ## Algorithms:
 - Reverse Polish Notation
