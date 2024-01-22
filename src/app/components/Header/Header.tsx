@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
    return (
-     <div className="w-fit m-2 px-4 py-2 shadow-lg rounded-md flex gap-5">
+     <div className="w-fit mt-4 mb-10 mx-4 px-4 py-2 shadow-lg rounded-md flex gap-5">
        <Link
          href="/"
          className="hover:text-[#61398F] hover:scale-110 hover:font-semibold transition-all ease-in-out"
