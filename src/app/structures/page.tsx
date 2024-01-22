@@ -1,6 +1,10 @@
+import Link from "next/link";
+
 const Structures = () => {
    return (
-      <p>Structures</p>
+      <div className="flex flex-col gap-2">
+         <Link href="/structures/queue">Queue</Link>
+      </div>
    )
 };
 
