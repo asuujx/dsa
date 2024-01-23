@@ -1,7 +1,7 @@
 # Data Structures and Algorithms (🚧 WORK IN PROGRESS 🚧)
 ## Data Structures: 
 - [ ] Stack
-- [ ] Queue
+- [x] Queue
 - [ ] Circular Queue
 - [ ] Priority Queue
 - [ ] Double Ended Queue
