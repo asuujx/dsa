@@ -26,16 +26,6 @@ const Queue = () => {
 
    return (
      <div className="flex flex-col items-center mt-20">
-       <div className="flex flex-col items-center space-y-5">
-         {queue.map((item, index) => (
-           <div
-             key={index}
-             className="w-16 h-16 bg-blue-500 text-white flex justify-center items-center"
-           >
-             {item}
-           </div>
-         ))}
-       </div>
        <div className="mt-5 space-x-2">
          <button
            onClick={enqueue}
@@ -52,6 +42,16 @@ const Queue = () => {
          >
            Clear Queue
          </button>
+       </div>
+       <div className="flex flex-col items-center space-y-5">
+         {queue.map((item, index) => (
+           <div
+             key={index}
+             className="w-16 h-16 bg-blue-500 text-white flex justify-center items-center"
+           >
+             {item}
+           </div>
+         ))}
        </div>
      </div>
    );
