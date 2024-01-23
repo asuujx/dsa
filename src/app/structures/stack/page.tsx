@@ -65,7 +65,7 @@ const Stack = () => {
           Clear
         </button>
       </div>
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 flex-wrap items-center">
         {stack.map((item, index) => (
           <div
             key={index}

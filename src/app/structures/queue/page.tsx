@@ -65,7 +65,7 @@ const Queue = () => {
           Clear
         </button>
       </div>
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 flex-wrap items-center">
         {queue.map((item, index) => (
           <div
             key={index}
