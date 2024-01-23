@@ -1,60 +1,82 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 const Queue = () => {
-   const [queue, setQueue] = useState<string[]>([]);
+  const [queue, setQueue] = useState<string[]>([]);
+  const [newItem, setNewItem] = useState<string>("");
 
-   const enqueue = () => {
-      const newItem = prompt("Enter a value to enqueue");
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewItem(e.target.value);
+  };
 
-      if (newItem !== null) {
-         setQueue([...queue, newItem]);
-      }
-   };
+  const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      enqueue();
+    }
+  };
 
-   const dequeue = () => {
-      if (queue.length > 0) {
-         setQueue(queue.slice(1));
-      } else {
-         alert("Queue is empty");
-      }
-   };
+  const enqueue = () => {
+    if (newItem.trim() !== "") {
+      setQueue([...queue, newItem]);
+      setNewItem("");
+    }
+  };
 
-   const clearQueue = () => {
-      setQueue([]);
-   };
+  const dequeue = () => {
+    if (queue.length > 0) {
+      setQueue(queue.slice(1));
+    } else {
+      alert("Queue is empty");
+    }
+  };
 
-   return (
-     <div className="flex flex-col items-center mt-20">
-       <div className="mt-5 space-x-2">
-         <button
-           onClick={enqueue}
-           className="px-4 py-2 bg-green-500 text-white"
-         >
-           Enqueue
-         </button>
-         <button onClick={dequeue} className="px-4 py-2 bg-red-500 text-white">
-           Dequeue
-         </button>
-         <button
-           onClick={clearQueue}
-           className="px-4 py-2 bg-gray-500 text-white"
-         >
-           Clear Queue
-         </button>
-       </div>
-       <div className="flex flex-col items-center space-y-5">
-         {queue.map((item, index) => (
-           <div
-             key={index}
-             className="w-16 h-16 bg-blue-500 text-white flex justify-center items-center"
-           >
-             {item}
-           </div>
-         ))}
-       </div>
-     </div>
-   );
+  const clearQueue = () => {
+    setQueue([]);
+  };
+
+  return (
+    <div className="flex flex-col items-center mt-20">
+      <h1 className="text-4xl">Queue</h1>
+      <div className="my-5 px-4 py-2 shadow-lg rounded-md flex gap-4">
+        <input
+          type="text"
+          value={newItem}
+          onChange={handleInputChange}
+          onKeyUp={handleInputKeyPress}
+          placeholder="Enter value.."
+          className="w-32 px-4 py-2 bg-[#F5F3F7] shadow-inner rounded-md"
+        />
+        <button
+          onClick={enqueue}
+          className="hover:text-[#61398F] hover:font-semibold hover:scale-110 transition-all ease-in-out"
+        >
+          Enqueue
+        </button>
+        <button
+          onClick={dequeue}
+          className="hover:text-[#61398F] hover:font-semibold hover:scale-110 transition-all ease-in-out"
+        >
+          Dequeue
+        </button>
+        <button
+          onClick={clearQueue}
+          className="hover:text-[#878787] hover:font-semibold hover:scale-110 transition-all ease-in-out"
+        >
+          Clear
+        </button>
+      </div>
+      <div className="flex gap-3 items-center">
+        {queue.map((item, index) => (
+          <div
+            key={index}
+            className="w-16 h-16 bg-[#9A73B5] text-white rounded-md flex justify-center items-center"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Queue;
