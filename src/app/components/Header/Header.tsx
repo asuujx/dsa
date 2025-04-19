@@ -1,28 +1,18 @@
-import Link from "next/link";
+import HeaderLink from "./HeaderLink";
 
 const Header = () => {
-   return (
-     <div className="w-fit mt-4 mb-10 mx-4 px-4 py-2 shadow-lg rounded-md flex gap-5">
-       <Link
-         href="/"
-         className="hover:text-[#61398F] hover:scale-110 hover:font-semibold transition-all ease-in-out"
-       >
-         Home
-       </Link>
-       <Link
-         href="/structures"
-         className="hover:text-[#61398F] hover:scale-110 hover:font-semibold transition-all ease-in-out"
-       >
-         Data Structures
-       </Link>
-       <Link
-         href="/algorithms"
-         className="hover:text-[#61398F] hover:scale-110 hover:font-semibold transition-all ease-in-out"
-       >
-         Algorithms
-       </Link>
-     </div>
-   );
+  return (
+    <div className="w-full">
+      <div className="w-fit mt-5 mx-auto shadow-md rounded-xl px-8 py-4 flex gap-5">
+        <HeaderLink linkUrl="/" linkText="Home"></HeaderLink>
+        <HeaderLink
+          linkUrl="/structures"
+          linkText="Data Structures"
+        ></HeaderLink>
+        <HeaderLink linkUrl="/algorithms" linkText="Algorithms"></HeaderLink>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
